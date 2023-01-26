@@ -29,7 +29,7 @@ const CollbackForm = () => {
     <Wrapper>
       <Img></Img>
       <Title>Request Callback</Title>
-      <Form name="contact" method="POST" data-netlify="true">
+      <Form name="contact" method="POST" data-netlify="true" noValidate netlify>
         <input type="hidden" name="form-name" value="contact"></input>
         <input type="hidden" name="bot-field"></input>
         <Lable>
