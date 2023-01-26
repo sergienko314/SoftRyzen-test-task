@@ -29,11 +29,12 @@ const CollbackForm = () => {
     <Wrapper>
       <Img></Img>
       <Title>Request Callback</Title>
-      <Form onSubmit={formik.handleSubmit} name="contact" method="POST" data-netlify="true" noValidate netlify>
-        <input type="hidden" name="form-name" value="contact"></input>
+      <Form onSubmit={formik.handleSubmit} name="contact" action="/contact" method="POST" data-netlify="true" noValidate netlify>
+        <input  type="hidden" name="form-name" value="contact"></input>
         <input type="hidden" name="bot-field"></input>
         <Lable>
           <Input
+            required
             placeholder="value"
             id="name"
             name="name"
@@ -43,13 +44,13 @@ const CollbackForm = () => {
           ></Input>
           <Placeholder>Enter your name</Placeholder>
         </Lable>
-
         <Lable>
           <Input
+            
             placeholder="value"
             id="email"
             name="email"
-            type="mail"
+            type="email"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
@@ -65,7 +66,7 @@ const CollbackForm = () => {
           ) : null}
         </Lable>
 
-        <Button>Send</Button>
+        <Button type='submit' > Send</Button>
       </Form>
     </Wrapper>
   );
