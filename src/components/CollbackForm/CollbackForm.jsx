@@ -29,7 +29,7 @@ const CollbackForm = () => {
     <Wrapper>
       <Img></Img>
       <Title>Request Callback</Title>
-      <Form onSubmit={formik.handleSubmit} name="contact" action="/contact" method="POST" data-netlify="true" noValidate netlify>
+      <Form name="contact" action="/contact" method="POST" data-netlify="true" noValidate netlify>
         <input  type="hidden" name="form-name" value="contact"></input>
         <input type="hidden" name="bot-field"></input>
         <Lable>
