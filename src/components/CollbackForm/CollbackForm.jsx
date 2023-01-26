@@ -22,14 +22,14 @@ const CollbackForm = () => {
     },
     validationSchema: schema,
 
-    onSubmit: values => {},
+    onSubmit: values => { console.log(formik.values)},
   });
 
   return (
     <Wrapper>
       <Img></Img>
       <Title>Request Callback</Title>
-      <Form name="contact" method="POST" data-netlify="true" noValidate netlify>
+      <Form onSubmit={formik.handleSubmit} name="contact" method="POST" data-netlify="true" noValidate netlify>
         <input type="hidden" name="form-name" value="contact"></input>
         <input type="hidden" name="bot-field"></input>
         <Lable>
@@ -39,7 +39,7 @@ const CollbackForm = () => {
             name="name"
             type="text"
             onChange={formik.handleChange}
-            // value={formik.values.name}
+            value={formik.values.name}
           ></Input>
           <Placeholder>Enter your name</Placeholder>
         </Lable>
