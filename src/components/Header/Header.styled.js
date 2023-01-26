@@ -9,27 +9,24 @@ export const HeaderWrapper = styled.header`
 
   margin-left: auto;
   margin-right: auto;
-  /* background: transparent; */
 
-  /* outline: 1px solid red; */
   width: 320px;
-  ${props => props.scroll <= 69} {
-    background: green;
+  transition-property: background-color;
+  transition-duration: 800ms;
+  transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
+  ${props => props.scroll <= 120} {
+    background: rgba(55, 55, 57, 0.8);
   }
   ${props => props.theme.breakpoints.tab} {
+    ${props => props.scroll <= 70} {
+      background: rgba(55, 55, 57, 0.8);
+    }
   }
   ${props => props.theme.breakpoints.desc} {
   }
 `;
 
 export const Wrapper = styled.div`
-  /* margin-left: 80px;
-  margin-right: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 15px;
-  padding-bottom: 15px; */
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {

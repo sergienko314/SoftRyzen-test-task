@@ -9,12 +9,15 @@ export const Wrapper = styled.div`
   margin-left: 24px;
   margin-bottom: 16px;
 
-  transition-property: scale transform;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+  }
+  &:hover > span {
+    text-shadow: 2px 3px 20px #fff;
   }
 
   ${props => props.theme.breakpoints.tab} {
