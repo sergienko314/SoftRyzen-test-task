@@ -21,17 +21,15 @@ const CollbackForm = () => {
       name: '',
     },
     validationSchema: schema,
-
-    onSubmit: values => { console.log(formik.values)},
   });
 
   return (
     <Wrapper>
       <Img></Img>
-      <Title>Request Callback</Title>
       <Form name="contact" action="/contact" method="POST" data-netlify="true" noValidate netlify>
         <input  type="hidden" name="form-name" value="contact"></input>
         <input type="hidden" name="bot-field"></input>
+        <Title>Request Callback</Title>
         <Lable>
           <Input
             required
@@ -46,7 +44,6 @@ const CollbackForm = () => {
         </Lable>
         <Lable>
           <Input
-            
             placeholder="value"
             id="email"
             name="email"

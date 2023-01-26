@@ -1,12 +1,21 @@
 import styled from 'styled-components';
 import formSmX1 from '../../images/form/form-sm@-x1.png';
 import formSmX2 from '../../images/form/form-sm@-x2.png';
+import formMdX1 from '../../images/form/form-md@-x1.jpeg';
+import formMdX2 from '../../images/form/form-md@-x2.jpeg';
+import formLgX1 from '../../images/form/form-lg@-x1.jpeg';
+import formLgX2 from '../../images/form/form-lg@-x2.jpeg';
 export const Wrapper = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   background: #f4f4f4;
+  ${props => props.theme.breakpoints.tab} {
+    flex-direction: row;
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
 export const Img = styled.div`
@@ -24,25 +33,28 @@ export const Img = styled.div`
     background: url(${formSmX2});
   }
 
-  @media screen and (min-width: 768px) {
-    background: url(${formSmX2});
+  ${props => props.theme.breakpoints.tab} {
+    width: 368px;
+    height: 354px;
+    background: url(${formMdX1});
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background: url(${formSmX2});
+      background: url(${formMdX2});
     }
   }
-
-  @media screen and (min-width: 1200px) {
-    background: url(${formSmX2});
+  ${props => props.theme.breakpoints.desc} {
+    width: 670px;
+    height: 454px;
+    background: url(${formLgX1});
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background: url(${formSmX2});
+      background: url(${formLgX2});
     }
   }
 `;
@@ -52,6 +64,10 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 20px;
   margin-bottom: 25px;
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
 export const Button = styled.button`
@@ -61,6 +77,10 @@ export const Button = styled.button`
   border: none;
   background: #28a745;
   border-radius: 5px;
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
 export const Title = styled.h3`
@@ -70,6 +90,10 @@ export const Title = styled.h3`
   font-size: 32px;
   line-height: 48px;
   margin-bottom: 69px;
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
 export const Placeholder = styled.span`
@@ -77,6 +101,10 @@ export const Placeholder = styled.span`
   top: 16px;
   left: 8px;
   transition: 0.2s ease all;
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
 export const Input = styled.input`
@@ -99,12 +127,20 @@ export const Input = styled.input`
   :focus-within ~ ${Placeholder}, :not(:placeholder-shown) ~ ${Placeholder} {
     top: -20px;
   }
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
 export const Lable = styled.label`
   position: relative;
   display: flex;
   justify-content: center;
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
 `;
 
 export const Validation = styled.div`

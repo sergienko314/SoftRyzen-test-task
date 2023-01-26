@@ -2,6 +2,7 @@
 // import RegistrationBaner from 'components/RegistrationBaner.js/RregistrationBaner';
 import React from 'react';
 import CollbackForm from '../../components/CollbackForm/CollbackForm';
+import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import Hero from '../../components/Hero/Hero';
 import {
@@ -52,9 +53,9 @@ const HomePage = () => {
             <RegistrationBaner />
           </SectionRegistrationBaner> */}
         </Main>
-        {/* <SectionFooter>
-          <Footter />
-        </SectionFooter> */}
+       
+          <Footer />
+      
       </Container>
     </>
   );
