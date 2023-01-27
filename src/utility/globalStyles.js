@@ -24,6 +24,12 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+  button{
+     min-width: 155px;
+     padding: 16px 32px;
+  }
+  img,picture {padding:0;
+  }
 `;
 
 export default GlobalStyle;

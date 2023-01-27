@@ -20,11 +20,11 @@ import Footer from '../../components/Footer';
 const HomePage = () => {
   return (
     <>
+      <Container>
       <Header />
       <SectionHero id="home">
         <Hero />
       </SectionHero>
-      <Container>
         <Main>
           <SectionBloge id="about">
             <Blog />

@@ -2,14 +2,20 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  /* padding-left: 20px;
-  padding-right: 20px; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding-left: 20px;
+  padding-right: 20px;
   width: 320px;
   ${props => props.theme.breakpoints.tab} {
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 768px;
   }
   ${props => props.theme.breakpoints.desc} {
+    padding-left: 28px;
+    padding-right: 28px;
+    width: 1360px;
   }
 `;
 

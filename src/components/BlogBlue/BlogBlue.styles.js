@@ -77,7 +77,6 @@ export const Button = styled.button`
   line-height: ${p => p.theme.lineHeights.secondary};
   text-align: center;
   color: ${props => props.theme.colors.white};
-  padding: 16px 32px;
   border: 1px solid ${props => props.theme.colors.white};
 
   border-radius: 5px;

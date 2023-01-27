@@ -1,34 +1,49 @@
 import styled from 'styled-components';
 export const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.background.accent};
+  margin-left: -20px;
+  margin-right: -20px;
+  display: flex;
+  flex-direction: column;
+
   ${props => props.theme.breakpoints.tab} {
+    flex-direction: row;
+    margin-left: -32px;
+    margin-right: -32px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-left: -28px;
+    margin-right: -28px;
   }
 `;
 
 export const WrapperContent = styled.div`
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 79px;
+  margin-top: 79px;
+  margin-bottom: 79px;
   color: ${props => props.theme.colors.white};
   font-weight: ${props => props.theme.fontWeights.normal};
   ${props => props.theme.breakpoints.tab} {
+    margin-top: 62px;
+    margin-bottom: 0;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-top: 80px;
+    margin-bottom: 0;
   }
 `;
 
 export const Img = styled.img`
   width: 320px;
-  height: 220px;
+  font-size: 0px;
   ${props => props.theme.breakpoints.tab} {
     width: 368px;
-    height: 589px;
+    /* height: 589px; */
   }
   ${props => props.theme.breakpoints.desc} {
     width: 670px;
-    height: 460px;
+    /* height: 460px; */
   }
 `;
 
@@ -36,7 +51,7 @@ export const Preview = styled.h3`
   font-size: ${p => p.theme.fontSizes.m};
   line-height: ${p => p.theme.lineHeights.secondary};
   font-weight: ${props => props.theme.fontWeights.normal};
-  margin-top: 79px;
+
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -77,7 +92,6 @@ export const Button = styled.button`
   line-height: ${p => p.theme.lineHeights.secondary};
   text-align: center;
   color: ${props => props.theme.colors.white};
-  padding: 16px 32px;
   border: 1px solid ${props => props.theme.colors.background.white};
 
   border-radius: 5px;

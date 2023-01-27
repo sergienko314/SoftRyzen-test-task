@@ -8,9 +8,10 @@ import heroX2 from '../../images/hero/RectangleXXX2x.png';
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  /* padding-left: -20px; */
 
+  margin-left: -20px;
+  margin-right: -20px;
+  background-size: cover;
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.4),
@@ -25,21 +26,12 @@ export const Wrapper = styled.div`
       ),
       url(${heroM2});
   }
-  padding-top: 100px;
-  height: 533px;
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 98px;
   margin-top: -116px;
 
-  /* &#home {
-    padding-top: 100px;
-    margin-top: -100px;
-
-    -webkit-background-clip: content-box;
-    background-clip: content-box;
-  } */
   ${props => props.theme.breakpoints.tab} {
+    margin-left: -32px;
+    margin-right: -32px;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.4),
@@ -56,6 +48,9 @@ export const Wrapper = styled.div`
     }
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-left: -28px;
+    margin-right: -28px;
+    justify-content: space-between;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.4),
@@ -94,8 +89,11 @@ export const Title = styled.h1`
   margin-right: auto;
 
   ${props => props.theme.breakpoints.tab} {
+    margin-top: 325px;
+    width: 100%;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-top: 199px;
   }
 `;
 
@@ -119,6 +117,8 @@ export const Button = styled.button`
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
+  margin-bottom: 104px;
+
   align-items: center;
   font-size: 18px;
   line-height: ${p => p.theme.lineHeights.secondary};
@@ -126,7 +126,7 @@ export const Button = styled.button`
   font-weight: ${props => props.theme.fontWeights.normal};
   text-align: center;
   color: ${props => props.theme.colors.white};
-  padding: 16px 32px;
+
   border: 0;
   font-family: 'Open Sans';
   font-style: normal;
@@ -146,7 +146,9 @@ export const Button = styled.button`
   :active {
   }
   ${props => props.theme.breakpoints.tab} {
+    margin-bottom: 378px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-bottom: 270px;
   }
 `;

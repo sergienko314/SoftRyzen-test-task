@@ -5,8 +5,6 @@ import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 export const NavStyled = styled.nav`
-  padding-bottom: 16px;
-
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -21,8 +19,10 @@ export const ListNav = styled.ul`
   list-style: none;
   gap: 10px;
   ${props => props.theme.breakpoints.tab} {
+    gap: 20px;
   }
   ${props => props.theme.breakpoints.desc} {
+    gap: 50px;
   }
 `;
 
@@ -54,30 +54,12 @@ export const LinkItemNav = styled(Link)`
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
-  &.any {
-    /* ::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: -10px;
-
-      display: block;
-
-      width: calc(100% + 20px);
-      height: 2px;
-      background: ${props => props.theme.colors.background.accent};
-      border-radius: 50px;
-      transition-property: opacity;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
-    } */
-  }
   :focus-visible:not(.active),
   :hover:not(.active) {
     ::after {
       content: '';
       position: absolute;
-      bottom: -5px;
+      bottom: -16px;
       left: -10px;
 
       display: block;
@@ -89,6 +71,10 @@ export const LinkItemNav = styled(Link)`
     }
   }
   ${props => props.theme.breakpoints.tab} {
+    font-weight: 400;
+    font-size: 18px;
+
+    line-height: 25px;
   }
   ${props => props.theme.breakpoints.desc} {
   }

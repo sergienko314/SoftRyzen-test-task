@@ -76,7 +76,6 @@ export const Button = styled.button`
   font-weight: ${props => props.theme.fontWeights.normal};
   text-align: center;
   color: ${props => props.theme.colors.white};
-  padding: 16px 56px;
   border: 0;
   font-family: 'Open Sans';
   font-style: normal;

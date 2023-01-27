@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   gap: 8px;
   background-color: transparent;
   padding-top: 22px;
-  margin-left: 24px;
   margin-bottom: 16px;
 
   transition-property: all;
