@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import formSmX1 from '../../images/form/form-sm@-x1.png';
 import formSmX2 from '../../images/form/form-sm@-x2.png';
-import formMdX1 from '../../images/form/form-md@-x1.jpeg';
-import formMdX2 from '../../images/form/form-md@-x2.jpeg';
-import formLgX1 from '../../images/form/form-lg@-x1.jpeg';
-import formLgX2 from '../../images/form/form-lg@-x2.jpeg';
+import formMdX1 from '../../images/form/form-md@-x1.png';
+import formMdX2 from '../../images/form/form-md@-x2.png';
+import formLgX1 from '../../images/form/form-lg@-x1.png';
+import formLgX2 from '../../images/form/form-lg@-x2.png';
 export const Wrapper = styled.div`
   margin: 0;
   padding: 0;
@@ -20,42 +20,38 @@ export const Wrapper = styled.div`
 
 export const Img = styled.div`
   background-image: url(${formSmX1});
+  background-position: center;
   width: 320px;
   height: 220px;
-  margin-left: -20px;
-  margin-right: -20px;
+
   margin-bottom: 51px;
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background: url(${formSmX2});
+  ${props => props.theme.retina.double} {
+    background-image: url(${formSmX2});
   }
-
   ${props => props.theme.breakpoints.tab} {
     width: 368px;
     height: 354px;
     background: url(${formMdX1});
-
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background: url(${formMdX2});
+    ${props => props.theme.retina.double} {
+      background-image: url(${formMdX2});
     }
   }
   ${props => props.theme.breakpoints.desc} {
     width: 670px;
     height: 454px;
     background: url(${formLgX1});
-
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background: url(${formLgX2});
+    ${props => props.theme.retina.double} {
+      background-image: url(${formLgX2});
     }
+  }
+`;
+
+export const WrapperForm = styled.div`
+  padding-left: 20px;
+  padding-right: 20px;
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
   }
 `;
 
@@ -71,12 +67,34 @@ export const Form = styled.form`
 `;
 
 export const Button = styled.button`
-  margin-top: 8px;
-  height: 57px;
-  width: 155px;
-  border: none;
-  background: #28a745;
+  margin-right: auto;
+  margin-top: 24px;
+  align-items: center;
+  font-size: 18px;
+  line-height: ${p => p.theme.lineHeights.secondary};
+  font-style: normal;
+  font-weight: ${props => props.theme.fontWeights.normal};
+  text-align: center;
+  color: ${props => props.theme.colors.white};
+  padding: 16px 56px;
+  border: 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-size: ${props => props.theme.fontSizes.m};
   border-radius: 5px;
+  cursor: pointer;
+  background-color: #28a745;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
+
+  :focus,
+  :hover {
+    opacity: 0.8;
+  }
+  :active {
+  }
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -84,9 +102,6 @@ export const Button = styled.button`
 `;
 
 export const Title = styled.h3`
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
   font-size: 32px;
   line-height: 48px;
   margin-bottom: 69px;
@@ -100,6 +115,7 @@ export const Placeholder = styled.span`
   position: absolute;
   top: 16px;
   left: 8px;
+  color: #808080;
   transition: 0.2s ease all;
   ${props => props.theme.breakpoints.tab} {
   }
@@ -113,7 +129,6 @@ export const Input = styled.input`
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
-
   width: 100%;
   height: 56px;
   background: #ffffff;

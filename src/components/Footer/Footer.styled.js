@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background: #333333;
-
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -25,6 +24,9 @@ export const Item = styled.li`
     width: 35px;
     height: 35px;
     fill: #ffffff;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
     :focus,
     :hover {
       fill: #28a745;

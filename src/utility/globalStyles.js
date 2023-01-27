@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
      margin: ${props => props.theme.space[0]}px;
      padding: ${props => props.theme.space[0]}px;
     background-color: ${props => props.theme.colors.background.white};
-    background-color: blue ;
+    /* background-color: blue ; */
   }
   ul, li, h1, h2, h3, h4, p, button, img  {
      padding: ${props => props.theme.space[0]}px;

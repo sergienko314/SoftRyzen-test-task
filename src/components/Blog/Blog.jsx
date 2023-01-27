@@ -24,7 +24,7 @@ const Blog = () => {
           <source
             type="image/jpeg"
             media="screen and (min-width: 1360px)"
-            srcset={`
+            srcSet={`
                     ${peopleXXX1x} 1x,
                     ${peopleXXX2x} 2x
                   `}
@@ -32,7 +32,7 @@ const Blog = () => {
           <source
             type="image/jpeg"
             media="screen and (min-width: 768px)"
-            srcset={`
+            srcSet={`
                     ${peopleLLL1x} 1x,
                     ${peopleLLL2x} 2x
                   `}
@@ -40,14 +40,14 @@ const Blog = () => {
           <source
             type="image/jpeg"
             media="screen and (max-width: 767px)"
-            srcset={`
+            srcSet={`
                     ${peopleMMM1x} 1x,
                     ${peopleMMM2x} 2x
                   `}
           />
           <Img
             type="image/web"
-            srcset={`
+            srcSet={`
             ${peopleWeb2x} 2x,
             ${peopleWeb1x} 1x,
             `}

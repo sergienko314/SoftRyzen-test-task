@@ -1,5 +1,5 @@
 import { SpanOne, SpanTwo, SpanZero, Wrapper } from './Logo.styled';
-import logo from '../../images/header/sprite.svg';
+import logo from '../../images/sprite.svg';
 
 const Logo = ({ backgroundColor }) => {
   return (

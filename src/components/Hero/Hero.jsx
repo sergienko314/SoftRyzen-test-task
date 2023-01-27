@@ -1,5 +1,5 @@
 import { Button, Text, Title, Wrapper, Сontext } from './Hero.styled';
-import button from '../../images/header/sprite.svg';
+import button from '../../images/sprite.svg';
 
 const Hero = () => {
   return (
@@ -12,7 +12,7 @@ const Hero = () => {
 
           <Button>
             <svg width="9px" height="18px">
-              <use href={`${button}#button`}></use>
+              <use href={`${button}#arrow`}></use>
             </svg>
             Read More
           </Button>

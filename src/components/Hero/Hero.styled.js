@@ -130,7 +130,7 @@ export const Button = styled.button`
   border: 0;
   font-family: 'Open Sans';
   font-style: normal;
-  font-size: ${props => props.theme.fontSizes.m};
+  font-size: ${props => props.theme.fontSizes.ms};
   border-radius: 5px;
   cursor: pointer;
   background-color: #28a745;
