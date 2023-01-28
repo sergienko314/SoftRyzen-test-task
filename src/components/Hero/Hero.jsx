@@ -1,11 +1,12 @@
 import { Button, Text, Title, Wrapper, Сontext } from './Hero.styled';
 import button from '../../images/sprite.svg';
+import { Container } from '../../page/HomePage/HomePage.styled';
 
 const Hero = () => {
   return (
     <>
       <Wrapper>
-        <Сontext>
+        <Container><Сontext>
           <Title>The Sky Is The Limit</Title>
 
           <Text>We provide world class financial assistance</Text>
@@ -16,7 +17,8 @@ const Hero = () => {
             </svg>
             Read More
           </Button>
-        </Сontext>
+        </Сontext></Container>
+        
       </Wrapper>
     </>
   );

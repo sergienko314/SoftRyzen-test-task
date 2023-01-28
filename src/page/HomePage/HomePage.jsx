@@ -26,7 +26,7 @@ const HomePage = () => {
         <Main>
           <SectionBloge id="about">
             <Blog />
-          </SectionBloge>
+         </SectionBloge>
           <SectionCases id="cases">
             <Cases />
           </SectionCases>

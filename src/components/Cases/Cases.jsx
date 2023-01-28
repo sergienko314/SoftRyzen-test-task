@@ -35,11 +35,9 @@ const Cases = () => {
   const useIsTablet = () =>
     useMediaQuery({ query: '(min-width: 768px) and (max-width: 1359px)' });
   const useIsDesktop = () => useMediaQuery({ query: '(min-width:1360px)' });
-  return (
-    <>
-      <Wrapper>
-        <Container>
-        <WrapperContent>
+  return (<>
+    <Wrapper currentImage={currentImage}>
+      <Container> <WrapperContent>
           <Preview>This is what we do</Preview>
           <Title>Business Cases</Title>
           <Text>
@@ -47,7 +45,7 @@ const Cases = () => {
             sapiente!
           </Text>
         </WrapperContent>
-        <Galeri>
+        <div>
           <ListItem>
           {useIsMobile() &&
                 imgData.map(({ imgSm1x, imgSm2x, imgWeb2x, imgWeb1x }, index) => (
@@ -160,9 +158,9 @@ const Cases = () => {
                 onClose={closeImageViewer}
               />
             )}
-          </ListItem>
-          </Galeri>
-          </Container>
+         </ListItem>
+        </div></Container>
+       
       </Wrapper>
       <div className="slide-container"></div>
     </>

@@ -32,7 +32,6 @@ export const ListItem = styled.ul`
   align-items: center;
 
   ${props => props.theme.breakpoints.tab} {
-    flex-wrap: wrap;
     flex-direction: row;
     gap: 18px;
     justify-content: center;

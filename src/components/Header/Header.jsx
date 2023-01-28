@@ -2,8 +2,7 @@ import React from 'react';
 import { Container } from '../../page/HomePage/HomePage.styled';
 import AppBar from '../AppBar';
 import Logo from '../Logo/Logo';
-// import AppBarAuth from 'components/AppBarAuth/AppBarAuth.jsx';
-// import Logo from 'components/Logo/Logo.jsx';
+
 import { HeaderWrapper, Wrapper } from './Header.styled.js';
 
 const Header = () => {
@@ -18,13 +17,15 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   return (
     <HeaderWrapper scroll={scroll}>
-      <Wrapper>
-        <Logo />
-        <AppBar />
+      <Container>
+        <Wrapper>
+          <Logo />
+          <AppBar />
         </Wrapper>
+      </Container>
     </HeaderWrapper>
   );
 };

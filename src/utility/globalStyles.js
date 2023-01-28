@@ -10,7 +10,14 @@ const GlobalStyle = createGlobalStyle`
      margin: ${props => props.theme.space[0]}px;
      padding: ${props => props.theme.space[0]}px;
     background-color: ${props => props.theme.colors.background.white};
-   
+    margin-left:auto ;
+    margin-right:auto ;
+
+    ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+    max-width: 1360px;
+  }
    
   }
   ul, li, h1, h2, h3, h4, p, button, img  {

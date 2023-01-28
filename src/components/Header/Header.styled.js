@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Container } from '../../page/HomePage/HomePage.styled';
 
 export const HeaderWrapper = styled.header`
   position: sticky;
@@ -23,7 +22,7 @@ export const HeaderWrapper = styled.header`
   ${props => props.theme.breakpoints.desc} {
   }
 `;
-export const Wrapper = styled(Container)`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,6 +33,7 @@ export const Wrapper = styled(Container)`
     align-items: center;
   }
   ${props => props.theme.breakpoints.desc} {
+    justify-content: space-around;
     align-items: baseline;
   }
 `;

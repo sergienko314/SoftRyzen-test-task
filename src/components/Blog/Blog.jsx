@@ -25,6 +25,41 @@ const Blog = () => {
         <Div>
           <picture>
             <source
+              type="image/jpeg"
+              media="screen and (min-width: 1360px)"
+              srcSet={`
+                    ${peopleLg1x} 1x,
+                    ${peopleLg2x} 2x
+                  `}
+            />
+            <source
+              type="image/jpeg"
+              media="screen and (min-width: 768px)"
+              srcSet={`
+                    ${peopleMd1x} 1x,
+                    ${peopleMd2x} 2x
+                  `}
+            />
+            <source
+              type="image/jpeg"
+              media="screen and (max-width: 767px)"
+              srcSet={`
+                    ${peopleSm1x} 1x,
+                    ${peopleSm2x} 2x
+                  `}
+            />
+            <Img
+              type="image/Web"
+              srcSet={`
+            ${peopleWeb1x} 2x,
+            ${peopleWeb2x} 1x,
+            `}
+              src={peopleWeb2x}
+              alt="фото"
+            />
+          </picture>
+          {/* <picture>
+            <source
                media="screen and (min-width: 1360px)"
                             srSet={`
                     ${peopleWeb1x} 1x,
@@ -60,13 +95,12 @@ const Blog = () => {
             <Img
               type="image/web"
               srcSet={`
-            ${peopleWeb2x} 2x,
-            ${peopleWeb1x} 1x,
+            ${peopleLg1x} 2x,
+            ${peopleLg1x} 1x,
             `}
-              src={peopleWeb1x}
-              alt="фото"
+              src={peopleLg1x}
             />
-          </picture>
+          </picture> */}
         </Div>
 
         <WrapperContainer>
