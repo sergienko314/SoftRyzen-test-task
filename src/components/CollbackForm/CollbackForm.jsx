@@ -10,11 +10,20 @@ import {
   Lable,
   Placeholder,
   WrapperForm,
+  Div
 } from './CollbackForm.styled';
 import icons from '../../images/sprite.svg';
 
 import { useFormik } from 'formik';
 
+import formSmX1 from '../../images/form/form-sm@-x1.png';
+import formSmX2 from '../../images/form/form-sm@-x2.png';
+import formMdX1 from '../../images/form/form-md@-x1.png';
+import formMdX2 from '../../images/form/form-md@-x2.png';
+import formLgX1 from '../../images/form/form-lg@-x1.png';
+import formLgX2 from '../../images/form/form-lg@-x2.png';
+import formWebX1 from '../../images/form/contact.webp';
+import formWebX2 from '../../images/form/contact@2x.webp';
 const CollbackForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -26,7 +35,52 @@ const CollbackForm = () => {
 
   return (
     <Wrapper>
-      <Img></Img>
+      <Div>
+          <picture>
+            <source
+               media="screen and (min-width: 1360px)"
+                            srcset={`
+                    ${formWebX1} 1x,
+                    ${formWebX2} 2x
+                  `}
+                            type="image/webp"
+                          />
+            <source
+              type="image/jpeg"
+              media="screen and (min-width: 1360px)"
+              srcSet={`
+                    ${formLgX1} 1x,
+                    ${formLgX2} 2x
+                  `}
+            />
+            <source
+              type="image/jpeg"
+              media="screen and (min-width: 769px)"
+              srcSet={`
+                    ${formMdX1} 1x,
+                    ${formMdX2} 2x
+                  `}
+            />
+            <source
+              type="image/jpeg"
+              media="screen and (max-width: 767px)"
+
+              srcSet={`
+                    ${formSmX1} 1x,
+                    ${formSmX2} 2x
+                  `}
+            />
+            <Img
+              type="image/web"
+              srcSet={`
+            ${formWebX1} 2x,
+            ${formWebX2} 1x,
+            `}
+              src={formWebX1}
+              alt="фото"
+            />
+          </picture></Div>
+      
       <WrapperForm>
         <Form
           name="contact"

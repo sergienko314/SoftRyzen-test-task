@@ -1,55 +1,43 @@
 import styled from 'styled-components';
-import formSmX1 from '../../images/form/form-sm@-x1.png';
-import formSmX2 from '../../images/form/form-sm@-x2.png';
-import formMdX1 from '../../images/form/form-md@-x1.png';
-import formMdX2 from '../../images/form/form-md@-x2.png';
-import formLgX1 from '../../images/form/form-lg@-x1.png';
-import formLgX2 from '../../images/form/form-lg@-x2.png';
+
 export const Wrapper = styled.div`
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
   background: #f4f4f4;
+
   ${props => props.theme.breakpoints.tab} {
-    flex-direction: row;
+    display: flex;
   }
   ${props => props.theme.breakpoints.desc} {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
-
-export const Img = styled.div`
-  background-image: url(${formSmX1});
-  background-position: center;
-  width: 320px;
-  height: 220px;
-
-  margin-bottom: 51px;
-  ${props => props.theme.retina.double} {
-    background-image: url(${formSmX2});
-  }
+export const Div = styled.div`
   ${props => props.theme.breakpoints.tab} {
-    width: 368px;
-    height: 354px;
-    background: url(${formMdX1});
-    ${props => props.theme.retina.double} {
-      background-image: url(${formMdX2});
-    }
+    max-width: 48%;
+    flex-basis: 100%;
   }
   ${props => props.theme.breakpoints.desc} {
-    width: 670px;
-    height: 454px;
-    background: url(${formLgX1});
-    ${props => props.theme.retina.double} {
-      background-image: url(${formLgX2});
-    }
+    max-width: 670px;
+  }
+`;
+export const Img = styled.img`
+  width: 100%;
+
+  ${props => props.theme.breakpoints.tab} {
+    object-fit: cover;
+    height: 100%;
+  }
+  ${props => props.theme.breakpoints.desc} {
   }
 `;
 
 export const WrapperForm = styled.div`
   padding-left: 20px;
   padding-right: 20px;
+
   ${props => props.theme.breakpoints.tab} {
+    flex-basis: 100%;
   }
   ${props => props.theme.breakpoints.desc} {
   }

@@ -3,8 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   padding-bottom: 20px;
   padding-top: 16px;
-  background: #f4f4f4;
-
   ${props => props.theme.breakpoints.tab} {
     padding-top: 50px;
     padding-bottom: 40px;
