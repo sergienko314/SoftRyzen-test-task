@@ -6,7 +6,6 @@ import {
   Wrapper,
   WrapperContent,
   Img,
-  Galeri,
   ListItem,
   Item
 } from './Cases.styled';
