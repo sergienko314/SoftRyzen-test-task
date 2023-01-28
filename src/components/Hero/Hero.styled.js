@@ -9,35 +9,28 @@ import heroX2 from '../../images/hero/RectangleXXX2x.png';
 export const Wrapper = styled.div`
   display: flex;
 
-  margin-left: -20px;
-  margin-right: -20px;
   background-size: cover;
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
     ),
     url(${heroM1});
   ${props => props.theme.retina.double} {
     background-image: linear-gradient(
         to right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1)
       ),
       url(${heroM2});
   }
+  background-repeat: no-repeat;
   padding-top: 98px;
   margin-top: -116px;
 
   ${props => props.theme.breakpoints.tab} {
-    margin-left: -32px;
-    margin-right: -32px;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),
-      url(${heroL1});
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      url(.jpg) url(${heroL1});
     ${props => props.theme.retina.double} {
       background-image: linear-gradient(
           to right,
@@ -48,15 +41,9 @@ export const Wrapper = styled.div`
     }
   }
   ${props => props.theme.breakpoints.desc} {
-    margin-left: -28px;
-    margin-right: -28px;
     justify-content: space-between;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),
-      url(${heroX1});
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      url(.jpg), url(${heroX1});
     ${props => props.theme.retina.double} {
       background-image: linear-gradient(
           to right,

@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Hero from '../../components/Hero/Hero';
 import {
-  Container,
   Main,
   SectionBloge,
   SectionBlogeBlue,
@@ -20,7 +19,6 @@ import Footer from '../../components/Footer';
 const HomePage = () => {
   return (
     <>
-      <Container>
       <Header />
       <SectionHero id="home">
         <Hero />
@@ -43,7 +41,6 @@ const HomePage = () => {
         <SectionFooter>
           <Footer />
         </SectionFooter>
-      </Container>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from '../../page/HomePage/HomePage.styled';
 import AppBar from '../AppBar';
 import Logo from '../Logo/Logo';
 // import AppBarAuth from 'components/AppBarAuth/AppBarAuth.jsx';
@@ -20,10 +21,12 @@ const Header = () => {
   
   return (
     <HeaderWrapper scroll={scroll}>
+      <Container>
       <Wrapper>
         <Logo />
         <AppBar />
-      </Wrapper>
+        </Wrapper>
+        </Container>
     </HeaderWrapper>
   );
 };

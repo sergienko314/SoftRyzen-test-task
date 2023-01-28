@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
      margin: ${props => props.theme.space[0]}px;
      padding: ${props => props.theme.space[0]}px;
     background-color: ${props => props.theme.colors.background.white};
-    /* background-color: blue ; */
+   
+   
   }
   ul, li, h1, h2, h3, h4, p, button, img  {
      padding: ${props => props.theme.space[0]}px;
@@ -28,7 +29,12 @@ const GlobalStyle = createGlobalStyle`
      min-width: 155px;
      padding: 16px 32px;
   }
-  img,picture {padding:0;
+  img {padding:0;
+    display: block;
+     /* height: auto;
+
+    object-fit: cover;
+    object-position: center; */
   }
 `;
 

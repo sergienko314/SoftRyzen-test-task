@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: relative;
-  /* margin-left: auto;
-  margin-right: auto; */
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
   width: 320px;
+
   ${props => props.theme.breakpoints.tab} {
     padding-left: 32px;
     padding-right: 32px;

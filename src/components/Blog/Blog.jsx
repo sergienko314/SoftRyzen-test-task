@@ -1,71 +1,88 @@
 import {
   Button,
+  Div,
   Img,
   Preview,
   Text,
   Title,
   Wrapper,
+  WrapperContainer,
   WrapperContent,
 } from './Blog.styles';
-import peopleXXX1x from '../../images/blog/RectangleXXX1x.jpg';
-import peopleXXX2x from '../../images/blog/RectangleXXX2x.jpg';
-import peopleLLL1x from '../../images/blog/RectangleLLL1x.jpg';
-import peopleLLL2x from '../../images/blog/RectangleLLL2x.jpg';
-import peopleMMM1x from '../../images/blog/RectangleMMM1x.jpg';
-import peopleMMM2x from '../../images/blog/RectangleMMM2x.jpg';
+import peopleLg1x from '../../images/blog/RectangleXXX1x.jpg';
+import peopleLg2x from '../../images/blog/RectangleXXX2x.jpg';
+import peopleMd1x from '../../images/blog/RectangleLLL1x.jpg';
+import peopleMd2x from '../../images/blog/RectangleLLL2x.jpg';
+import peopleSm1x from '../../images/blog/RectangleMMM1x.jpg';
+import peopleSm2x from '../../images/blog/RectangleMMM2x.jpg';
 import peopleWeb1x from '../../images/blog/people.webp';
 import peopleWeb2x from '../../images/blog/people@2x.webp';
+import { Container } from '../../page/HomePage/HomePage.styled';
 
 const Blog = () => {
   return (
     <>
       <Wrapper>
-        <picture>
-          <source
-            type="image/jpeg"
-            media="screen and (min-width: 1360px)"
-            srcSet={`
-                    ${peopleXXX1x} 1x,
-                    ${peopleXXX2x} 2x
+        <Div>
+          <picture>
+            <source
+               media="screen and (min-width: 1360px)"
+                            srcset={`
+                    ${peopleWeb1x} 1x,
+                    ${peopleWeb2x} 2x
                   `}
-          />
-          <source
-            type="image/jpeg"
-            media="screen and (min-width: 768px)"
-            srcSet={`
-                    ${peopleLLL1x} 1x,
-                    ${peopleLLL2x} 2x
+                            type="image/webp"
+                          />
+            <source
+              type="image/jpeg"
+              media="screen and (min-width: 1360px)"
+              srcSet={`
+                    ${peopleLg1x} 1x,
+                    ${peopleLg2x} 2x
                   `}
-          />
-          <source
-            type="image/jpeg"
-            media="screen and (max-width: 767px)"
-            srcSet={`
-                    ${peopleMMM1x} 1x,
-                    ${peopleMMM2x} 2x
+            />
+            <source
+              type="image/jpeg"
+              media="screen and (min-width: 769px)"
+              srcSet={`
+                    ${peopleMd1x} 1x,
+                    ${peopleMd2x} 2x
                   `}
-          />
-          <Img
-            type="image/web"
-            srcSet={`
+            />
+            <source
+              type="image/jpeg"
+              media="screen and (max-width: 767px)"
+
+              srcSet={`
+                    ${peopleSm1x} 1x,
+                    ${peopleSm2x} 2x
+                  `}
+            />
+            <Img
+              type="image/web"
+              srcSet={`
             ${peopleWeb2x} 2x,
             ${peopleWeb1x} 1x,
             `}
-            src={peopleWeb1x}
-            alt="фото"
-          />
-        </picture>
-        <WrapperContent>
-          <Preview>What you are looking for</Preview>
-          <Title>We provide bespoke solutions</Title>
-          <Text>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-            ipsum dignissimos quae laudantium asperiores nam aliquid impedit
-            harum illum dolore explicabo ab dolores itaque rerum temporibus
-            doloribus iste maiores deleniti?
-          </Text>
-          <Button>Read More</Button>
-        </WrapperContent>
+              src={peopleWeb1x}
+              alt="фото"
+            />
+          </picture>
+        </Div>
+
+        <WrapperContainer>
+          <WrapperContent>
+            <Preview>What you are looking for</Preview>
+            <Title>We provide bespoke solutions</Title>
+            <Text>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptate, ipsum dignissimos quae laudantium asperiores nam
+              aliquid impedit harum illum dolore explicabo ab dolores itaque
+              rerum temporibus doloribus iste maiores deleniti?
+            </Text>
+            <Button>Read More</Button>
+          </WrapperContent>
+        </WrapperContainer>
       </Wrapper>
     </>
   );

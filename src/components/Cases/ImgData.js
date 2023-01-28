@@ -128,18 +128,4 @@ export const imgData = [
     imgLg1x: people6Lg1x,
     imgLg2x: people6Lg2x,
   },
-  {
-    index: 7,
-    imgWeb1x: people7Web1x,
-    imgWeb2x: people7Web2x,
-    imgLg1x: people7Lg1x,
-    imgLg2x: people7Lg2x,
-  },
-  {
-    index: 8,
-    imgWeb1x: people8Web1x,
-    imgWeb2x: people8Web2x,
-    imgLg1x: people8Lg1x,
-    imgLg2x: people8Lg2x,
-  },
 ];

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   align-items: center;
   gap: 8px;
   background-color: transparent;
-  padding-top: 22px;
+  margin-top: 22px;
   margin-bottom: 16px;
 
   transition-property: all;
@@ -20,8 +20,10 @@ export const Wrapper = styled.div`
   }
 
   ${props => props.theme.breakpoints.tab} {
+    margin-top: 16px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-top: 32px;
   }
 `;
 

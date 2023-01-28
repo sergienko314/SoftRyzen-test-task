@@ -1,11 +1,7 @@
 import styled from 'styled-components';
-import { PhotoProvider, PhotoView } from 'react-photo-view';
 export const Wrapper = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 40px;
-  padding-top: 56px;
-  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -14,28 +10,40 @@ export const Wrapper = styled.div`
 
 export const WrapperContent = styled.div`
   text-align: center;
+  margin-top: 56px;
+  margin-bottom: 31px;
   ${props => props.theme.breakpoints.tab} {
+    margin-top: 48px;
+    margin-bottom: 30px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-top: 80px;
+    margin-bottom: 36px;
   }
 `;
 
 export const ListItem = styled.ul`
   display: flex;
+  gap: 17px;
   flex-direction: column;
-  gap: 8px;
 
   ${props => props.theme.breakpoints.tab} {
+    flex-direction: initial;
+    flex-wrap: wrap;
   }
   ${props => props.theme.breakpoints.desc} {
   }
 `;
-export const PhotoViewPort = styled(PhotoView)`
+
+export const Item = styled.li`
+  flex-basis: calc((100% - 18 * 2) / 3);
+  /* calc((100% - 18 * 3- 1) / 4); */
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
   }
 `;
+
 export const ImgBd = styled.div`
   border-radius: 4px;
   border: 9px solid white;
@@ -44,24 +52,31 @@ export const ImgBd = styled.div`
   ${props => props.theme.breakpoints.desc} {
   }
 `;
-
-export const PhotoProviderPort = styled.div`
+export const Galeri = styled.div`
+  margin-bottom: 40px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
   justify-content: center;
   gap: 8px;
   ${props => props.theme.breakpoints.tab} {
+    flex-direction: row;
+    gap: 17px;
   }
   ${props => props.theme.breakpoints.desc} {
+    gap: 20px;
+  }
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+    margin-bottom: 80px;
   }
 `;
+
 export const Img = styled.img`
   width: 280px;
-  height: 176px;
   display: block;
-  src: ${props => props.imgLLL1x};
   max-width: 100%;
-  height: auto;
 
   object-fit: cover;
   object-position: center;
@@ -72,14 +87,10 @@ export const Img = styled.img`
     filter: brightness(1.1);
   }
   ${props => props.theme.breakpoints.tab} {
-    src: ${props => props.imgLLL1x};
     width: 223px;
-    height: 148px;
   }
   ${props => props.theme.breakpoints.desc} {
-    src: ${props => props.imgLLL1x};
     width: 420px;
-    height: 287px;
   }
 `;
 
@@ -111,7 +122,7 @@ export const Text = styled.p`
   line-height: ${p => p.theme.lineHeights.secondary};
   font-weight: ${props => props.theme.fontWeights.normal};
   margin-top: 24px;
-  margin-bottom: 31px;
+
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {

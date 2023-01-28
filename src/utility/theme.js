@@ -7,6 +7,7 @@ export const theme = {
     blue: '#0284D0',
 
     background: {
+      black: '#111111',
       white: '#FFFFFF',
       main: '#FDF7F2',
       backdrop: '',

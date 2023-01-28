@@ -2,31 +2,41 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 16px;
   background: #f4f4f4;
+
   ${props => props.theme.breakpoints.tab} {
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
   ${props => props.theme.breakpoints.desc} {
+    padding-top: 88px;
+    padding-bottom: 80px;
   }
 `;
 
 export const WrapperContent = styled.div`
   text-align: center;
+  margin-bottom: 63px;
   ${props => props.theme.breakpoints.tab} {
+    margin-bottom: 24px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-bottom: 36px;
   }
 `;
 
 export const ListItem = styled.ul`
   display: flex;
   flex-direction: column;
+  gap: 30px;
 
   ${props => props.theme.breakpoints.tab} {
+    flex-direction: row;
+    gap: 18px;
   }
   ${props => props.theme.breakpoints.desc} {
+    gap: 20px;
   }
 `;
 
@@ -42,7 +52,8 @@ export const WrapperContact = styled.div`
 `;
 
 export const Name = styled.h3`
-  margin-top: 16px;
+  margin-top: 14px;
+  margin-bottom: 8px;
   font-size: ${p => p.theme.fontSizes.ml};
   line-height: ${p => p.theme.lineHeights.secondary};
   font-weight: ${props => props.theme.fontWeights.normal};
@@ -50,6 +61,7 @@ export const Name = styled.h3`
   font-weight: ${props => props.theme.fontWeights.normal};
 
   ${props => props.theme.breakpoints.tab} {
+    margin-top: 16px;
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -61,7 +73,6 @@ export const Position = styled.p`
   font-weight: ${props => props.theme.fontWeights.normal};
   color: ${props => props.theme.colors.main};
   font-weight: ${props => props.theme.fontWeights.normal};
-  margin-bottom: 30px;
 
   ${props => props.theme.breakpoints.tab} {
   }
@@ -95,7 +106,6 @@ export const Preview = styled.h3`
   line-height: ${p => p.theme.lineHeights.secondary};
   font-weight: ${props => props.theme.fontWeights.normal};
   color: ${props => props.theme.fontWeights.normal};
-  margin-top: 72px;
 
   ${props => props.theme.breakpoints.tab} {
   }
@@ -119,7 +129,6 @@ export const Text = styled.p`
   line-height: ${p => p.theme.lineHeights.secondary};
   font-weight: ${props => props.theme.fontWeights.normal};
   margin-top: 24px;
-  margin-bottom: 63px;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {

@@ -18,7 +18,10 @@ export const ListNav = styled.ul`
   justify-content: center;
   list-style: none;
   gap: 10px;
+  margin-bottom: 22px;
   ${props => props.theme.breakpoints.tab} {
+    margin-bottom: 16px;
+    margin-bottom: 0;
     gap: 20px;
   }
   ${props => props.theme.breakpoints.desc} {
@@ -59,7 +62,7 @@ export const LinkItemNav = styled(Link)`
     ::after {
       content: '';
       position: absolute;
-      bottom: -16px;
+      bottom: -10px;
       left: -10px;
 
       display: block;
@@ -71,6 +74,7 @@ export const LinkItemNav = styled(Link)`
     }
   }
   ${props => props.theme.breakpoints.tab} {
+    bottom: -16px;
     font-weight: 400;
     font-size: 18px;
 

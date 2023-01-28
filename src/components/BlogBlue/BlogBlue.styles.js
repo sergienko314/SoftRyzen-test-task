@@ -1,34 +1,55 @@
 import styled from 'styled-components';
+import { Container } from '../../page/HomePage/HomePage.styled';
 export const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.background.blue};
   ${props => props.theme.breakpoints.tab} {
+    display: flex;
+    flex-direction: row-reverse;
   }
   ${props => props.theme.breakpoints.desc} {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
+
+export const Div = styled.div`
+  background-color: ${props => props.theme.colors.background.accent};
+  ${props => props.theme.breakpoints.tab} {
+    flex-basis: 100%;
+  }
+  ${props => props.theme.breakpoints.desc} {
+  }
+`;
+
+export const WrapperContainer = styled(Container)`
+  ${props => props.theme.breakpoints.tab} {
+  }
+  ${props => props.theme.breakpoints.desc} {
+    padding-left: 28px;
+    padding-right: 20px;
   }
 `;
 
 export const WrapperContent = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 58px;
   color: ${props => props.theme.colors.white};
   font-weight: ${props => props.theme.fontWeights.normal};
   ${props => props.theme.breakpoints.tab} {
+    padding-bottom: 59px;
   }
   ${props => props.theme.breakpoints.desc} {
+    padding-bottom: 80px;
   }
 `;
 
 export const Img = styled.img`
-  width: 320px;
-  height: 248px;
+  width: 100%;
   ${props => props.theme.breakpoints.tab} {
-    width: 368px;
-    height: 493px;
+    height: 100%;
+    object-fit: cover;
   }
   ${props => props.theme.breakpoints.desc} {
-    width: 670px;
-    height: 460px;
   }
 `;
 
@@ -38,8 +59,11 @@ export const Preview = styled.h3`
   font-weight: ${props => props.theme.fontWeights.normal};
   margin-top: 48px;
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.ms};
+    margin-top: 59px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-top: 80px;
   }
 `;
 
@@ -49,6 +73,7 @@ export const Title = styled.h3`
   font-weight: ${props => props.theme.fontWeights.normal};
   margin-top: 16px;
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.xll};
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -77,6 +102,7 @@ export const Button = styled.button`
   line-height: ${p => p.theme.lineHeights.secondary};
   text-align: center;
   color: ${props => props.theme.colors.white};
+  padding: 16px 32px;
   border: 1px solid ${props => props.theme.colors.white};
 
   border-radius: 5px;
