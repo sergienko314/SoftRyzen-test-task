@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
     margin-top: 16px;
   }
   ${props => props.theme.breakpoints.desc} {
-    margin-top: 32px;
+    margin-top: 38px;
   }
 `;
 

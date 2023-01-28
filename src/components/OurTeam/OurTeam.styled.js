@@ -182,7 +182,7 @@ export const Div = styled.div`
     rgba(0, 0, 0, 0.4)
   ); */
   transition-property: all;
-  transition-duration: 500ms;
+  transition-duration: 960ms;
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
   :hover {

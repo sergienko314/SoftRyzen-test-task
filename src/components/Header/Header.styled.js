@@ -34,6 +34,6 @@ export const Wrapper = styled.div`
   }
   ${props => props.theme.breakpoints.desc} {
     justify-content: space-around;
-    align-items: baseline;
+    align-items: flex-start;
   }
 `;

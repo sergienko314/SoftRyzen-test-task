@@ -25,6 +25,7 @@ export const ListNav = styled.ul`
     gap: 20px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-top: 48px;
     gap: 50px;
   }
 `;
