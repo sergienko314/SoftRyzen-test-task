@@ -52,15 +52,6 @@ import people6Md2x from '../../images/cases/cases6LLLx2.jpg';
 import people6Lg1x from '../../images/cases/cases6XXXx1.jpg';
 import people6Lg2x from '../../images/cases/cases6XXXx2.jpg';
 
-import people7Web1x from '../../images/cases/cases7.webp';
-import people7Web2x from '../../images/cases/cases7@2x.webp';
-import people7Lg1x from '../../images/cases/cases7.jpg';
-import people7Lg2x from '../../images/cases/cases7@2x.jpg';
-
-import people8Web1x from '../../images/cases/cases8.webp';
-import people8Web2x from '../../images/cases/cases8@2x.webp';
-import people8Lg1x from '../../images/cases/cases8.jpg';
-import people8Lg2x from '../../images/cases/cases8@2x.jpg';
 export const imgData = [
   {
     index: 1,

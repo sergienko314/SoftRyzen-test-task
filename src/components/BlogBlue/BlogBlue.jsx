@@ -17,7 +17,6 @@ import peopleMMM1x from '../../images/blogBlue/RectangleMMM1x.jpg';
 import peopleMMM2x from '../../images/blogBlue/RectangleMMM2x.jpg';
 import peopleWeb1x from '../../images/blogBlue/blog.webp';
 import peopleWeb2x from '../../images/blogBlue/blog@2x.webp';
-import { Container } from '../../page/HomePage/HomePage.styled';
 
 const BlogBlue = () => {
   return (
