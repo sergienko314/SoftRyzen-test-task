@@ -16,9 +16,10 @@ export const Wrapper = styled.div`
 export const Div = styled.div`
   background-color: ${props => props.theme.colors.background.accent};
   ${props => props.theme.breakpoints.tab} {
-    flex-basis: 100%;
+    min-width: 48%;
   }
   ${props => props.theme.breakpoints.desc} {
+    min-width: 670px;
   }
 `;
 

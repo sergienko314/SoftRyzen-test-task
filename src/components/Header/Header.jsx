@@ -21,12 +21,10 @@ const Header = () => {
   
   return (
     <HeaderWrapper scroll={scroll}>
-      <Container>
       <Wrapper>
         <Logo />
         <AppBar />
         </Wrapper>
-        </Container>
     </HeaderWrapper>
   );
 };

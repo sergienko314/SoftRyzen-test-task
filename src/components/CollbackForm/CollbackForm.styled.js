@@ -5,11 +5,13 @@ export const Wrapper = styled.div`
 
   ${props => props.theme.breakpoints.tab} {
     display: flex;
+    margin-bottom: 40px;
   }
   ${props => props.theme.breakpoints.desc} {
     max-width: 1360px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0px;
   }
 `;
 export const Div = styled.div`

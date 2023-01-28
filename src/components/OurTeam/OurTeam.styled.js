@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   padding-top: 16px;
 
   ${props => props.theme.breakpoints.tab} {

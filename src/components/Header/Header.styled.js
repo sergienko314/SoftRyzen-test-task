@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Container } from '../../page/HomePage/HomePage.styled';
 
 export const HeaderWrapper = styled.header`
   position: sticky;
@@ -22,7 +23,7 @@ export const HeaderWrapper = styled.header`
   ${props => props.theme.breakpoints.desc} {
   }
 `;
-export const Wrapper = styled.div`
+export const Wrapper = styled(Container)`
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -15,14 +15,16 @@ export const Wrapper = styled.div`
 export const Div = styled.div`
   background-color: ${props => props.theme.colors.background.accent};
   ${props => props.theme.breakpoints.tab} {
-    flex-basis: 100%;
+    min-width: 48%;
   }
   ${props => props.theme.breakpoints.desc} {
+    min-width: 670px;
   }
 `;
 
 export const WrapperContainer = styled(Container)`
   ${props => props.theme.breakpoints.tab} {
+    display: flex;
   }
   ${props => props.theme.breakpoints.desc} {
     padding-left: 20px;
@@ -31,6 +33,7 @@ export const WrapperContainer = styled(Container)`
 `;
 
 export const WrapperContent = styled.div`
+  flex-basis: 100%;
   padding-bottom: 79px;
   color: ${props => props.theme.colors.white};
   font-weight: ${props => props.theme.fontWeights.normal};
@@ -44,11 +47,11 @@ export const WrapperContent = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 100%;
+  min-width: 100%;
 
   ${props => props.theme.breakpoints.tab} {
-    height: 100%;
     object-fit: cover;
+    height: 100%;
   }
   ${props => props.theme.breakpoints.desc} {
   }

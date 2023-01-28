@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Container } from '../../page/HomePage/HomePage.styled';
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -55,12 +56,14 @@ export const ImgBd = styled.div`
   ${props => props.theme.breakpoints.desc} {
   }
 `;
-export const Galeri = styled.div`
+export const Galeri = styled(Container)`
   margin-bottom: 40px;
 
   ${props => props.theme.breakpoints.tab} {
+    /* width: 768px; */
   }
   ${props => props.theme.breakpoints.desc} {
+    width: 1360px;
     margin-bottom: 80px;
   }
 `;
