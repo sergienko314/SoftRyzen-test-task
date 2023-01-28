@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   padding-bottom: 20px;
   padding-top: 16px;
+
   ${props => props.theme.breakpoints.tab} {
     padding-top: 50px;
     padding-bottom: 40px;
@@ -28,10 +29,13 @@ export const ListItem = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
 
   ${props => props.theme.breakpoints.tab} {
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 18px;
+    justify-content: center;
   }
   ${props => props.theme.breakpoints.desc} {
     gap: 20px;

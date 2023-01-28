@@ -26,7 +26,7 @@ const Blog = () => {
           <picture>
             <source
                media="screen and (min-width: 1360px)"
-                            srcset={`
+                            srcSet={`
                     ${peopleWeb1x} 1x,
                     ${peopleWeb2x} 2x
                   `}

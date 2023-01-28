@@ -51,10 +51,10 @@ const Cases = () => {
           <ListItem>
           {useIsMobile() &&
                 imgData.map(({ imgSm1x, imgSm2x, imgWeb2x, imgWeb1x }, index) => (
-                <Item kye={index}>
+                <Item key={index}>
                         <picture>
                           <source
-                            srcset={`
+                            srcSet={`
                     ${imgWeb1x} 1x,
                     ${imgWeb2x} 2x
                   `}
@@ -88,10 +88,10 @@ const Cases = () => {
             )}
             {useIsTablet() &&
                 imgData.map(({ imgSm1x, imgSm2x, imgWeb2x, imgWeb1x }, index) => (
-                <Item kye={index}>
+                <Item key={index}>
                         <picture>
                           <source
-                            srcset={`
+                            srcSet={`
                     ${imgWeb1x} 1x,
                     ${imgWeb2x} 2x
                   `}
@@ -125,10 +125,10 @@ const Cases = () => {
               )}
               {useIsDesktop() &&
                 imgData.map(({ imgSm1x, imgSm2x, imgWeb2x, imgWeb1x }, index) => (
-                <Item kye={index}>
+                <Item key={index}>
                         <picture>
                           <source
-                            srcset={`
+                            srcSet={`
                     ${imgWeb1x} 1x,
                     ${imgWeb2x} 2x
                   `}

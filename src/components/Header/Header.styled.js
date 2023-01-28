@@ -33,5 +33,6 @@ export const Wrapper = styled.div`
     align-items: center;
   }
   ${props => props.theme.breakpoints.desc} {
+    align-items: baseline;
   }
 `;

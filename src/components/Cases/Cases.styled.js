@@ -24,20 +24,23 @@ export const WrapperContent = styled.div`
 
 export const ListItem = styled.ul`
   display: flex;
-  gap: 17px;
-  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  gap: 8px;
 
   ${props => props.theme.breakpoints.tab} {
-    flex-direction: initial;
-    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 17px;
   }
   ${props => props.theme.breakpoints.desc} {
+    gap: 20px;
   }
 `;
-
 export const Item = styled.li`
-  flex-basis: calc((100% - 18 * 2) / 3);
-  /* calc((100% - 18 * 3- 1) / 4); */
+  display: flex;
+  flex-direction: column;
+
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -54,18 +57,7 @@ export const ImgBd = styled.div`
 `;
 export const Galeri = styled.div`
   margin-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap;
 
-  justify-content: center;
-  gap: 8px;
-  ${props => props.theme.breakpoints.tab} {
-    flex-direction: row;
-    gap: 17px;
-  }
-  ${props => props.theme.breakpoints.desc} {
-    gap: 20px;
-  }
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {

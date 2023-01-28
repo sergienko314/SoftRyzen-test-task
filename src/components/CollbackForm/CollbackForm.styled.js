@@ -35,11 +35,13 @@ export const Img = styled.img`
 export const WrapperForm = styled.div`
   padding-left: 20px;
   padding-right: 20px;
-
+  margin-top: 51px;
   ${props => props.theme.breakpoints.tab} {
     flex-basis: 100%;
+    margin-top: 32px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-top: 56px;
   }
 `;
 
@@ -47,7 +49,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   ${props => props.theme.breakpoints.tab} {
   }
   ${props => props.theme.breakpoints.desc} {
@@ -92,9 +94,14 @@ export const Title = styled.h3`
   font-size: 32px;
   line-height: 48px;
   margin-bottom: 69px;
+  margin-left: auto;
+  margin-right: auto;
   ${props => props.theme.breakpoints.tab} {
+    margin-left: 0;
+    margin-bottom: 4px;
   }
   ${props => props.theme.breakpoints.desc} {
+    margin-bottom: 0;
   }
 `;
 

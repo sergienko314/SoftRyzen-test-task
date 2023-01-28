@@ -39,7 +39,7 @@ const CollbackForm = () => {
           <picture>
             <source
                media="screen and (min-width: 1360px)"
-                            srcset={`
+                            srcSet={`
                     ${formWebX1} 1x,
                     ${formWebX2} 2x
                   `}

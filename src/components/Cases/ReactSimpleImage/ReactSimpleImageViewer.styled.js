@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   position: fixed;
-  padding: 0px 60px 0px 60px;
+  padding: 0px 10px 0px 10px;
   left: 0;
   top: 0;
   width: 100%;
@@ -14,9 +14,11 @@ export const Wrapper = styled.div`
   box-sizing: border-box;
 
   ${props => props.theme.breakpoints.tab} {
+    padding: 0px 60px 0px 60px;
   }
-  padding: 0px 10px 0px 10px;
+
   ${props => props.theme.breakpoints.desc} {
+    padding: 0px 80px 0px 80px;
   }
   /* @media (max-width: 900px) {
     padding: 0;
@@ -145,12 +147,11 @@ export const Img = styled.img`
   transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 
   ${props => props.theme.breakpoints.tab} {
-    width: calc(${props => props.width}px - 120px);
+    width: ${({ width }) => (width < 1000 ? `${width - 160}px` : '840px')};
   }
 
   ${props => props.theme.breakpoints.desc} {
-    /* height: 603px;
-    width: 900px; */
+    width: 900px;
   }
 `;
 

@@ -43,10 +43,10 @@ const OurTeam = () => {
             imgMd1x,
             imgMd2x,
             imglg1x,
-            imglg2x })=>(<ItemImg>
+            imglg2x })=>(<ItemImg key={name}>
             <picture>
               <source
-                            srcset={`
+                            srcSet={`
                     ${imgWeb1x} 1x,
                     ${imgWeb2x} 2x
                   `}

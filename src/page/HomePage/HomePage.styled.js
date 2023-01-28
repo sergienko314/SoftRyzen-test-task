@@ -5,12 +5,10 @@ export const Container = styled.div`
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  width: 320px;
 
   ${props => props.theme.breakpoints.tab} {
     padding-left: 32px;
     padding-right: 32px;
-    width: 768px;
   }
   ${props => props.theme.breakpoints.desc} {
     padding-left: 28px;

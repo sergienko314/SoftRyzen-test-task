@@ -26,9 +26,11 @@ export const Wrapper = styled.div`
   }
   background-repeat: no-repeat;
   padding-top: 98px;
-  margin-top: -116px;
+
+  margin-top: -121px;
 
   ${props => props.theme.breakpoints.tab} {
+    margin-top: -116px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
       url(.jpg) url(${heroL1});
     ${props => props.theme.retina.double} {
