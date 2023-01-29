@@ -99,6 +99,9 @@ export const Title = styled.h3`
   margin-left: auto;
   margin-right: auto;
   ${props => props.theme.breakpoints.tab} {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
     margin-left: 0;
     margin-bottom: 4px;
   }
@@ -139,6 +142,7 @@ export const Input = styled.input`
     top: -20px;
   }
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.ms};
   }
   ${props => props.theme.breakpoints.desc} {
   }

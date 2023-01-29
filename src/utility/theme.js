@@ -7,7 +7,6 @@ export const theme = {
     blue: '#0284D0',
 
     background: {
-      black: '#111111',
       white: '#FFFFFF',
       main: '#FDF7F2',
       backdrop: '',
@@ -30,7 +29,7 @@ export const theme = {
     xs: '12px',
     s: '14px',
     m: '16px',
-    ms: '18',
+    ms: '18px',
     ml: '20px',
     l: '24px',
     xl: '26px',
@@ -75,7 +74,7 @@ export const theme = {
     tab: '@media screen and (min-width: 768px)',
     desc: '@media screen and (min-width: 1360px)',
     onlyMob: '@media screen and (max-width: 767px)',
-    onlyTab: '@media screen and (min-width: 768px) and (max-width: 1359hpx)',
+    onlyTab: '@media screen and (min-width: 768px) and (max-width: 1359px)',
   },
   retina: {
     double:

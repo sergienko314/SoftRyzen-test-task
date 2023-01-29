@@ -63,6 +63,7 @@ export const Name = styled.h3`
 
   ${props => props.theme.breakpoints.tab} {
     margin-top: 16px;
+    font-size: ${p => p.theme.fontSizes.xlx};
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -76,6 +77,7 @@ export const Position = styled.p`
   font-weight: ${props => props.theme.fontWeights.normal};
 
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.ms};
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -109,6 +111,7 @@ export const Preview = styled.h3`
   color: ${props => props.theme.fontWeights.normal};
 
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.ml};
   }
   ${props => props.theme.colors.main} {
   }
@@ -120,6 +123,7 @@ export const Title = styled.h3`
   font-weight: ${props => props.theme.fontWeights.normal};
   margin-top: 16px;
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.xll};
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -131,6 +135,7 @@ export const Text = styled.p`
   font-weight: ${props => props.theme.fontWeights.normal};
   margin-top: 24px;
   ${props => props.theme.breakpoints.tab} {
+    font-size: ${p => p.theme.fontSizes.ms};
   }
   ${props => props.theme.breakpoints.desc} {
   }
@@ -154,6 +159,9 @@ export const List = styled.ul`
     rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.4)
   );
+  transition-property: all;
+  transition-duration: 960ms;
+  transition-timing-function: cubic-bezier(0.43, 0.21, 0, 1.03);
 `;
 export const Item = styled.li`
   svg {

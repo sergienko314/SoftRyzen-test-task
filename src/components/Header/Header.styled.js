@@ -26,14 +26,20 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 
   ${props => props.theme.breakpoints.tab} {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
   ${props => props.theme.breakpoints.desc} {
-    justify-content: space-around;
+    /* justify-content: space-; */
     align-items: flex-start;
   }
 `;
