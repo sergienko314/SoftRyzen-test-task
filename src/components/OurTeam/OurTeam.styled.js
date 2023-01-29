@@ -171,6 +171,12 @@ export const Item = styled.li`
     use {
     }
   }
+  :hover,
+  :focus {
+    svg {
+      fill: ${props => props.theme.colors.accent};
+    }
+  }
 `;
 export const ItemImg = styled.li`
   position: relative;
