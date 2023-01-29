@@ -87,7 +87,7 @@ const CollbackForm = () => {
 
       <WrapperForm>
         <Form
-          onSubmit={formik.handleSubmit}
+          // onSubmit={formik.handleSubmit}
           name="contact"
           action="/contact"
           method="POST"
