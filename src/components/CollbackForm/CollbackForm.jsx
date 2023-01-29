@@ -24,14 +24,35 @@ import formLgX1 from '../../images/form/form-lg@-x1.png';
 import formLgX2 from '../../images/form/form-lg@-x2.png';
 import formWebX1 from '../../images/form/contact.webp';
 import formWebX2 from '../../images/form/contact@2x.webp';
+import axios from "axios";
+import qs from "qs";
+import { useState } from 'react';
 const CollbackForm = () => {
+  const [errMsg, setErrMsg] = useState("");
   const formik = useFormik({
     initialValues: {
+      "bot-field": "",
+      "form-name": "contact",
       email: '',
       name: '',
     },
     validationSchema: schema,
-    onSubmit: value => {
+    onSubmit: async (value) => {
+      const data = {
+        ...value,
+      };
+      const options = {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        data: qs.stringify(data),
+        url: "/"
+      };
+      try {
+        await axios(options);
+
+      } catch (e) {
+        setErrMsg(e.message);
+      }
 
 
     }
@@ -87,7 +108,7 @@ const CollbackForm = () => {
 
       <WrapperForm>
         <Form
-          // onSubmit={formik.handleSubmit}
+          onSubmit={formik.handleSubmit}
           name="contact"
           action="/contact"
           method="POST"
@@ -128,7 +149,17 @@ const CollbackForm = () => {
               </Validation>
             ) : null}
           </Lable>
-          <Button type="submit">Send</Button>
+          <Button
+            // disabled={
+            //   Boolean(!formik.values.email) ||
+            //   Boolean(formik.errors.email)
+            // }
+            errors={formik.errors.email}
+            touched={formik.touched.email}
+            type="submit"
+          >Send</Button>
+
+
         </Form>
       </WrapperForm>
     </Wrapper>
