@@ -1,4 +1,4 @@
-import { schema } from './Validation';
+import { schema } from './Validation'
 import {
   Button,
   Img,
@@ -31,63 +31,67 @@ const CollbackForm = () => {
       name: '',
     },
     validationSchema: schema,
+    onSubmit: value => {
+
+    }
   });
 
   return (
     <Wrapper>
       <Div>
-          <picture>
-            <source
-               media="screen and (min-width: 1360px)"
-                            srcSet={`
+        <picture>
+          <source
+            media="screen and (min-width: 1360px)"
+            srcSet={`
                     ${formWebX1} 1x,
                     ${formWebX2} 2x
                   `}
-                            type="image/webp"
-                          />
-            <source
-              type="image/jpeg"
-              media="screen and (min-width: 1360px)"
-              srcSet={`
+            type="image/webp"
+          />
+          <source
+            type="image/jpeg"
+            media="screen and (min-width: 1360px)"
+            srcSet={`
                     ${formLgX1} 1x,
                     ${formLgX2} 2x
                   `}
-            />
-            <source
-              type="image/jpeg"
-              media="screen and (min-width: 769px)"
-              srcSet={`
+          />
+          <source
+            type="image/jpeg"
+            media="screen and (min-width: 769px)"
+            srcSet={`
                     ${formMdX1} 1x,
                     ${formMdX2} 2x
                   `}
-            />
-            <source
-              type="image/jpeg"
-              media="screen and (max-width: 767px)"
+          />
+          <source
+            type="image/jpeg"
+            media="screen and (max-width: 767px)"
 
-              srcSet={`
+            srcSet={`
                     ${formSmX1} 1x,
                     ${formSmX2} 2x
                   `}
-            />
-            <Img
-              type="image/web"
-              srcSet={`
+          />
+          <Img
+            type="image/web"
+            srcSet={`
             ${formWebX1} 2x,
             ${formWebX2} 1x,
             `}
-              src={formWebX1}
-              alt="фото"
-            />
-          </picture></Div>
-      
+            src={formWebX1}
+            alt="фото"
+          />
+        </picture></Div>
+
       <WrapperForm>
         <Form
+          onChange={formik.handleSubmit}
           name="contact"
           action="/contact"
           method="POST"
           data-netlify="true"
-          noValidate
+          // noValidate
           netlify
         >
           <input type="hidden" name="form-name" value="contact"></input>
@@ -95,7 +99,6 @@ const CollbackForm = () => {
           <Title>Request Callback</Title>
           <Lable>
             <Input
-              required
               placeholder="value"
               id="name"
               name="name"
@@ -126,7 +129,7 @@ const CollbackForm = () => {
             ) : null}
           </Lable>
 
-          <Button type="submit">Send</Button>
+          <Button disabled={Boolean(!formik.values.email)} type="submit">Send</Button>
         </Form>
       </WrapperForm>
     </Wrapper>

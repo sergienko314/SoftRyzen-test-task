@@ -5,6 +5,5 @@ export const schema = yup.object().shape({
   name: yup
     .string()
     .min(2, 'min Name 2 simvols')
-    .max(32, 'max Name 32 simvols')
-    .required('enter your Name, please'),
+    .max(32, 'max Name 32 simvols'),
 });

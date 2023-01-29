@@ -42,6 +42,7 @@ const Blog = () => {
             />
             <source
               type="image/jpeg"
+              sizes='contain'
               media="screen and (max-width: 767px)"
               srcSet={`
                     ${peopleSm1x} 1x,
@@ -58,49 +59,6 @@ const Blog = () => {
               alt="фото"
             />
           </picture>
-          {/* <picture>
-            <source
-               media="screen and (min-width: 1360px)"
-                            srSet={`
-                    ${peopleWeb1x} 1x,
-                    ${peopleWeb2x} 2x
-                  `}
-                            type="image/webp"
-                          />
-            <source
-              type="image/jpeg"
-              media="screen and (min-width: 1360px)"
-              srcSet={`
-                    ${peopleLg1x} 1x,
-                    ${peopleLg2x} 2x
-                  `}
-            />
-            <source
-              type="image/jpeg"
-              media="screen and (min-width: 769px)"
-              srcSet={`
-                    ${peopleMd1x} 1x,
-                    ${peopleMd2x} 2x
-                  `}
-            />
-            <source
-              type="image/jpeg"
-              media="screen and (max-width: 767px)"
-
-              srcSet={`
-                    ${peopleSm1x} 1x,
-                    ${peopleSm2x} 2x
-                  `}
-            />
-            <Img
-              type="image/web"
-              srcSet={`
-            ${peopleLg1x} 2x,
-            ${peopleLg1x} 1x,
-            `}
-              src={peopleLg1x}
-            />
-          </picture> */}
         </Div>
 
         <WrapperContainer>
